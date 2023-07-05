@@ -20,6 +20,7 @@
   --background: #fafafa;
   --text-color: #212529;
   --grey: #949393;
+  --primary-color: #36d4c1;
 }
 
 html {
@@ -60,10 +61,12 @@ p {
   font-size: var(--font-size-basis);
 }
 
-/* ::-moz-selection {
+::-moz-selection {
   background-color: var(--primary-color);
+  color: white;
 }
 
 ::selection {
   background-color: var(--primary-color);
-} */
+  color: white;
+}
