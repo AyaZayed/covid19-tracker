@@ -94,6 +94,7 @@ abbr[title] {
     /* 1 */
     text-decoration: underline;
     /* 2 */
+    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     /* 2 */
 }
@@ -218,6 +219,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+    -moz-appearance: button;
     appearance: button;
     -webkit-appearance: button;
 }
@@ -319,6 +321,7 @@ textarea {
  */
 
 [type="search"] {
+    -moz-appearance: textfield;
     appearance: textfield;
     -webkit-appearance: textfield;
     /* 1 */
