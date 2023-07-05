@@ -1,0 +1,116 @@
+body {
+    background-color: var(--background);
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 2rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header img {
+    width: 20rem;
+}
+
+.stats-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.stats-cards .card {
+    background-color: white;
+    border-radius: .7rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    min-height: 13.7rem;
+    -webkit-border-radius: .7rem;
+    -moz-border-radius: .7rem;
+    -ms-border-radius: .7rem;
+    -o-border-radius: .7rem;
+}
+
+.stats-cards .card:first-of-type {
+    border-bottom: 5px solid var(--blue);
+}
+
+.stats-cards .card:nth-of-type(2) {
+    border-bottom: 5px solid var(--green);
+}
+
+.stats-cards .card:last-of-type {
+    border-bottom: 5px solid var(--red);
+}
+
+.stats-cards .card p,
+.stats-cards .card h6,
+.stats-cards .card h4 {
+    margin: 1rem;
+    padding: 0;
+}
+
+.stats-cards .card h6 {
+    color: var(--grey);
+}
+
+.country-picker {
+    display: flex;
+    justify-content: center;
+}
+
+.country-picker select {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    font-size: var(--h5);
+    padding: 0.5rem;
+    background-color: transparent;
+}
+
+.country-picker select:focus {
+    outline: none;
+}
+
+.chart canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (min-width: 768px) {
+    header img {
+        width: 30rem;
+    }
+
+    .stats-cards {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .country-picker select {
+        width: 50%;
+    }
+}

@@ -9,14 +9,23 @@
   --h2: calc(var(--h3) * var(--type-scale));
   --h1: calc(var(--h2) * var(--type-scale));
   --font-small: calc(0.667rem);
-  --font-family: 'Open Sans', sans-serif;
+  --font-family: 'Roboto', sans-serif;
   /* colors */
-
+  --blue: rgba(54, 162, 235, 1);
+  --green: rgb(52, 218, 68);
+  --red: rgba(255, 99, 132, 1);
+  --pastel-blue: #bcd4e6;
+  --pastel-green: #b9fbc0;
+  --pastel-red: #ffac81;
+  --background: #fafafa;
+  --text-color: #212529;
+  --grey: #949393;
 }
 
 html {
   font-size: 100%;
   font-family: var(--font-family);
+  box-sizing: border-box;
 }
 
 ul {

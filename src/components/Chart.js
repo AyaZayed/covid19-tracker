@@ -14,19 +14,25 @@ export default function Chart({ infected, recovered, deceased }) {
                         {
                             label: 'People',
                             data: [infected, recovered, deceased],
+                            //    pastel blue, pastel green, pastel red
                             backgroundColor: [
-                                'rgba(255, 206, 86, 0.5)',
-                                'rgba(75, 192, 192, 0.5)',
-                                'rgba(255, 99, 132, 0.5)'
+                                '#bcd4e6',
+                                '#b9fbc0',
+                                '#ffac81'
                             ],
                             borderColor: [
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgb(52, 218, 68)',
                                 'rgba(255, 99, 132, 1)'
                             ],
+
                             borderWidth: 1
                         }
                     ]
+                }}
+                options={{
+                    responsive: true,
+                    maintainAspectRatio: false
                 }}
             />
         </div>

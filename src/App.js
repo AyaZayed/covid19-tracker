@@ -38,7 +38,9 @@ export default function App() {
   console.log(infected, recovered, deceased)
   return (
     <>
-      <img src={headerImg} alt="covid 19" />
+      <header>
+        <img src={headerImg} alt="covid 19" />
+      </header>
       <StatsCards infected={infected} recovered={recovered} deceased={deceased} />
       <CountryPicker countries={countries} setSelectedCountry={setSelectedCountry} />
       <Chart infected={infected} recovered={recovered} deceased={deceased} selectedCountry={selectedCountry} />
