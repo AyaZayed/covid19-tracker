@@ -13,6 +13,7 @@ export default function App() {
   const [infected, setInfected] = useState(0)
   const [recovered, setRecovered] = useState(0)
   const [deceased, setDeceased] = useState(0)
+  const [date, setDate] = useState(null)
 
   useEffect(() => {
     fetch(url)
@@ -30,18 +31,21 @@ export default function App() {
       setInfected(country.infected)
       setRecovered(country.recovered)
       setDeceased(country.deceased)
+      setDate(new Date(country.lastUpdatedApify).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+      )
     }
   }, [selectedCountry, covidData])
 
-
   const headerImg = new URL('../public/header.svg', import.meta.url)
-  console.log(infected, recovered, deceased)
+
+  console.log(date)
+
   return (
     <>
       <header>
         <img src={headerImg} alt="covid 19" />
       </header>
-      <StatsCards infected={infected} recovered={recovered} deceased={deceased} />
+      <StatsCards infected={infected} recovered={recovered} deceased={deceased} date={date} />
       <CountryPicker countries={countries} setSelectedCountry={setSelectedCountry} />
       <Chart infected={infected} recovered={recovered} deceased={deceased} selectedCountry={selectedCountry} />
     </>
